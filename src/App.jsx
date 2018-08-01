@@ -13,15 +13,17 @@ class App extends React.Component {
       super(props);
       this.handleChange = this.handleChange.bind(this);
       this.state = {
-        data: []
+        data: [],
+        loading: true
       };
   }
 
   componentDidMount() {
-    getUserBoardData(3).then(
+    getUserBoardData(10).then(
       function(success) {
         this.setState({
-          data: JSON.stringify(success)
+          data: success,
+          loading: false
         })
       }.bind(this),
 
@@ -37,7 +39,8 @@ class App extends React.Component {
   render() {
     return (
     <div>
-      {this.state.data}
+      <StudentTable data={this.state.loading ? [] : this.state.data.data[0]} columns={this.state.loading ? [] : this.state.data.columns[0]} />
+      <StudentTable data={this.state.loading ? [] : this.state.data.data[1]} columns={this.state.loading ? [] : this.state.data.columns[1]} />
     </div>
 
 

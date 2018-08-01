@@ -13,14 +13,16 @@ class App extends React.Component {
     super(props);
     this.handleChange = this.handleChange.bind(this);
     this.state = {
-      data: []
+      data: [],
+      loading: true
     };
   }
 
   componentDidMount() {
-    getUserBoardData(3).then(function (success) {
+    getUserBoardData(10).then(function (success) {
       this.setState({
-        data: JSON.stringify(success)
+        data: success,
+        loading: false
       });
     }.bind(this), function (fail) {
       console.log('Error getting data from server: ', fail);
@@ -33,7 +35,8 @@ class App extends React.Component {
     return React.createElement(
       'div',
       null,
-      this.state.data
+      React.createElement(StudentTable, { data: this.state.loading ? [] : this.state.data.data[0], columns: this.state.loading ? [] : this.state.data.columns[0] }),
+      React.createElement(StudentTable, { data: this.state.loading ? [] : this.state.data.data[1], columns: this.state.loading ? [] : this.state.data.columns[1] })
     );
   }
 }

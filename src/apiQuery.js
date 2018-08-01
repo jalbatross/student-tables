@@ -72,18 +72,19 @@ export async function getUserBoardData(maxGrade) {
         [
             {
                 Header: 'Name',
-                accessor: 'name'
+                accessor: 'user_name'
             }
         ]
         for (let m = minGrade; m <= maxGrade; m++) {
             columnObj.push( {
                 Header: 'Grade ' + m,
-                accessor: 'g'+m+'_score'
+                accessor: 'grade_'+m
             })
         }
         columns.push(columnObj);
     }
 
+    console.log(columns);
     return {
         data: gradeData,
         columns: columns

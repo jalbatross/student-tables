@@ -23,21 +23,8 @@ class StudentTable extends React.Component {
 
     render() {
 
-        const columns = [{
-            Header: 'Student Name',
-            accessor: 'name' // String-based value accessors!
-        }, {
-            Header: 'Grade 2',
-            accessor: 'g2_score',
-            Cell: props => < span className = 'score' > { props.value } < /span> // Custom cell components!
-        }, {
-            Header: 'Grade 3',
-            accessor: 'g3_score',
-            Cell: props => this.parseData(props.value)
-        }]
-        
         return(
-            <ReactTable data={this.props.data} columns={ columns}/> 
+            <ReactTable data={this.props.data} columns={ this.props.columns}/> 
         )
     }
 
