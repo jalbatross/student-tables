@@ -37,7 +37,7 @@ class StudentTable extends React.Component {
         }]
         
         return(
-            <ReactTable data={this.props.data} columns={columns}/> 
+            <ReactTable data={this.props.data} columns={ columns}/> 
         )
     }
 

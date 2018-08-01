@@ -18,10 +18,10 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    getUserBoardData(2).then(
+    getUserBoardData(3).then(
       function(success) {
         this.setState({
-          data: JSON.stringify(success[0])
+          data: JSON.stringify(success)
         })
       }.bind(this),
 

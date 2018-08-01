@@ -18,9 +18,9 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    getUserBoardData(2).then(function (success) {
+    getUserBoardData(3).then(function (success) {
       this.setState({
-        data: JSON.stringify(success[0])
+        data: JSON.stringify(success)
       });
     }.bind(this), function (fail) {
       console.log('Error getting data from server: ', fail);

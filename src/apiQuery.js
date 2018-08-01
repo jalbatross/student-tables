@@ -3,6 +3,7 @@ import $ from "jquery";
 export async function getUserBoardData(maxGrade) {
     const lastGrade = maxGrade;
     var gradeData = [];
+    var columns = [];
 
     var boardParams = {
         learning_center_id: "All",
@@ -34,5 +35,57 @@ export async function getUserBoardData(maxGrade) {
             })
     }
 
-    return gradeData;
+    //Fixing data for table
+    var maxGrade = 0;
+    var minGrade = 0;
+    var query = "grade_";
+    var currentGrade = 0;
+    var currentStudent = "";
+    //Get column data
+    //
+    //Iterate through each grade
+    for (let i = 0; i < gradeData.length; i++) {
+        currentGrade = gradeData[i];
+        maxGrade = currentGrade[0].current_grade;
+        minGrade = maxGrade;
+        
+        //Find min by iterating through all students
+        for (let j = 0; j < currentGrade.length; j++) {
+            if (minGrade === 2) {
+                break;
+            }
+            currentStudent = currentGrade[j];
+            //Iterate through scores of current student
+            for (let k = minGrade; k >=2; k--) {
+                query = "grade_"+k;
+                if(currentStudent[query].length === 0) {
+                    break;
+                }
+                if (k <= minGrade) {
+                    minGrade = k;
+                }
+            }
+        }
+
+        //add to columns
+        var columnObj = 
+        [
+            {
+                Header: 'Name',
+                accessor: 'name'
+            }
+        ]
+        for (let m = minGrade; m <= maxGrade; m++) {
+            columnObj.push( {
+                Header: 'Grade ' + m,
+                accessor: 'g'+m+'_score'
+            })
+        }
+        columns.push(columnObj);
+    }
+
+    return {
+        data: gradeData,
+        columns: columns
+    };
 }
