@@ -19,7 +19,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    getUserBoardData(10).then(
+    getUserBoardData(4).then(
       function(success) {
         this.setState({
           data: success,
@@ -39,8 +39,13 @@ class App extends React.Component {
   render() {
     return (
     <div>
-      <StudentTable data={this.state.loading ? [] : this.state.data.data[0]} columns={this.state.loading ? [] : this.state.data.columns[0]} />
-      <StudentTable data={this.state.loading ? [] : this.state.data.data[1]} columns={this.state.loading ? [] : this.state.data.columns[1]} />
+    <table>
+    <tr>
+    <td> <StudentTable data={this.state.loading ? [] : this.state.data.data[0]} columns={this.state.loading ? [] : this.state.data.columns[0]} /> </td>
+    <td> <StudentTable data={this.state.loading ? [] : this.state.data.data[1]} columns={this.state.loading ? [] : this.state.data.columns[1]} /></td>
+    <td> <StudentTable data={this.state.loading ? [] : this.state.data.data[2]} columns={this.state.loading ? [] : this.state.data.columns[2]} /></td>
+    </tr>
+    </table>
     </div>
 
 

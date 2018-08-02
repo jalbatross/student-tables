@@ -35,8 +35,33 @@ class App extends React.Component {
     return React.createElement(
       'div',
       null,
-      React.createElement(StudentTable, { data: this.state.loading ? [] : this.state.data.data[0], columns: this.state.loading ? [] : this.state.data.columns[0] }),
-      React.createElement(StudentTable, { data: this.state.loading ? [] : this.state.data.data[1], columns: this.state.loading ? [] : this.state.data.columns[1] })
+      React.createElement(
+        'table',
+        null,
+        React.createElement(
+          'tr',
+          null,
+          React.createElement(
+            'td',
+            null,
+            ' ',
+            React.createElement(StudentTable, { data: this.state.loading ? [] : this.state.data.data[0], columns: this.state.loading ? [] : this.state.data.columns[0] }),
+            ' '
+          ),
+          React.createElement(
+            'td',
+            null,
+            ' ',
+            React.createElement(StudentTable, { data: this.state.loading ? [] : this.state.data.data[1], columns: this.state.loading ? [] : this.state.data.columns[1] })
+          ),
+          React.createElement(
+            'td',
+            null,
+            ' ',
+            React.createElement(StudentTable, { data: this.state.loading ? [] : this.state.data.data[2], columns: this.state.loading ? [] : this.state.data.columns[2] })
+          )
+        )
+      )
     );
   }
 }
