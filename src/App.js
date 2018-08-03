@@ -19,7 +19,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    getUserBoardData(10).then(function (success) {
+    getUserBoardData(4).then(function (success) {
       this.setState({
         data: success,
         loading: false
@@ -39,26 +39,29 @@ class App extends React.Component {
         'table',
         null,
         React.createElement(
-          'tr',
+          'tbody',
           null,
           React.createElement(
-            'td',
+            'tr',
             null,
-            ' ',
-            React.createElement(StudentTable, { data: this.state.loading ? [] : this.state.data.data[0], columns: this.state.loading ? [] : this.state.data.columns[0] }),
-            ' '
-          ),
-          React.createElement(
-            'td',
-            null,
-            ' ',
-            React.createElement(StudentTable, { data: this.state.loading ? [] : this.state.data.data[1], columns: this.state.loading ? [] : this.state.data.columns[1] })
-          ),
-          React.createElement(
-            'td',
-            null,
-            ' ',
-            React.createElement(StudentTable, { data: this.state.loading ? [] : this.state.data.data[2], columns: this.state.loading ? [] : this.state.data.columns[2] })
+            React.createElement(
+              'td',
+              null,
+              ' ',
+              React.createElement(StudentTable, { data: this.state.loading ? [] : this.state.data.data[0], columns: this.state.loading ? [] : this.state.data.columns[0] })
+            ),
+            React.createElement(
+              'td',
+              null,
+              ' ',
+              React.createElement(StudentTable, { data: this.state.loading ? [] : this.state.data.data[1], columns: this.state.loading ? [] : this.state.data.columns[1] })
+            ),
+            React.createElement(
+              'td',
+              null,
+              ' ',
+              React.createElement(StudentTable, { data: this.state.loading ? [] : this.state.data.data[2], columns: this.state.loading ? [] : this.state.data.columns[2] })
+            )
           )
         )
       )
@@ -67,7 +70,4 @@ class App extends React.Component {
 }
 
 export default App;
-
-const div = document.querySelector('div');
-ReactDOM.render(React.createElement(App, null), div);
 

@@ -40,11 +40,13 @@ class App extends React.Component {
     return (
     <div>
     <table>
+    <tbody>
     <tr>
-    <td> <StudentTable data={this.state.loading ? [] : this.state.data.data[0]} columns={this.state.loading ? [] : this.state.data.columns[0]} /> </td>
+    <td> <StudentTable data={this.state.loading ? [] : this.state.data.data[0]} columns={this.state.loading ? [] : this.state.data.columns[0]} /></td>
     <td> <StudentTable data={this.state.loading ? [] : this.state.data.data[1]} columns={this.state.loading ? [] : this.state.data.columns[1]} /></td>
     <td> <StudentTable data={this.state.loading ? [] : this.state.data.data[2]} columns={this.state.loading ? [] : this.state.data.columns[2]} /></td>
     </tr>
+    </tbody>
     </table>
     </div>
 
@@ -54,7 +56,4 @@ class App extends React.Component {
 }
 
 export default App;
-
-const div = document.querySelector('div');
-ReactDOM.render(<App />, div);
 
