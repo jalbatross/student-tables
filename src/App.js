@@ -48,7 +48,7 @@ class App extends React.Component {
               'td',
               null,
               ' ',
-              React.createElement(StudentTable, { data: this.state.loading ? [] : this.state.data.data[0], columns: this.state.loading ? [] : this.state.data.columns[0] })
+              React.createElement(StudentTable, { data: this.state.loading ? [] : this.state.data.data[0], columns: this.state.loading ? [] : this.state.data.columns[0], title: "hello" })
             ),
             React.createElement(
               'td',

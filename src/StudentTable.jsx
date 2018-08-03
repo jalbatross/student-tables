@@ -2,12 +2,14 @@ import React, { Component }  from "react";
 import ReactDOM from 'react-dom';
 import ReactTable from 'react-table';
 import 'react-table/react-table.css';
+import './StudentTable.css'
 
 class StudentTable extends React.Component {
     constructor(props) {
         super(props);
     }
 
+    /*
     parseData(data) {
         console.log(data)
         if (data.toString().indexOf('/') !== -1) {
@@ -20,11 +22,15 @@ class StudentTable extends React.Component {
             
         }
     }
+    */
 
     render() {
 
         return(
-            <ReactTable data={this.props.data} columns={ this.props.columns}/> 
+            <div>
+                <span className="table-title ReactTable">{this.props.title}</span>
+                <ReactTable data={this.props.data} columns={ this.props.columns}/> 
+            </div>
         )
     }
 
