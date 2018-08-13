@@ -8,7 +8,7 @@ import {shallow} from 'enzyme';
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
-Enzyme.configure({ adapter: new Adapter() });
+Enzyme.configure({ adapter: new Adapter() }); 
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
@@ -29,4 +29,8 @@ it('renders correct title', () => {
     const component = shallow(<StudentTable title ={'hello'}/>);
     expect(component.find('.table-title')).toHaveLength(1);
     expect(component.find('.table-title').text()).toBe('hello');
+});
+
+it('applies correct cell formatting', () => {
+  
 });

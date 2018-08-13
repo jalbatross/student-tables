@@ -34,7 +34,7 @@ class StudentTable extends React.Component {
                 { className: 'table-title ReactTable' },
                 this.props.title
             ),
-            React.createElement(ReactTable, { data: this.props.data, columns: this.props.columns })
+            React.createElement(ReactTable, { data: this.props.data, defaultPageSize: 50, columns: this.props.columns, style: { height: '400px' }, showPagination: false })
         );
     }
 

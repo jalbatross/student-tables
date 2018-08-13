@@ -19,7 +19,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    getUserBoardData(4).then(
+    getUserBoardData(5).then(
       function(success) {
         this.setState({
           data: success,
@@ -39,12 +39,13 @@ class App extends React.Component {
   render() {
     return (
     <div>
-    <table>
+    <table className="tables-container">
     <tbody>
     <tr>
-    <td> <StudentTable data={this.state.loading ? [] : this.state.data.data[0]} columns={this.state.loading ? [] : this.state.data.columns[0]} /></td>
-    <td> <StudentTable data={this.state.loading ? [] : this.state.data.data[1]} columns={this.state.loading ? [] : this.state.data.columns[1]} /></td>
-    <td> <StudentTable data={this.state.loading ? [] : this.state.data.data[2]} columns={this.state.loading ? [] : this.state.data.columns[2]} /></td>
+    <td> <StudentTable data={this.state.loading ? [] : this.state.data.data[0]} columns={this.state.loading ? [] : this.state.data.columns[0]} title={'grade2'} /></td>
+    <td> <StudentTable data={this.state.loading ? [] : this.state.data.data[1]} columns={this.state.loading ? [] : this.state.data.columns[1]} title={'grade3'} /></td>
+    <td> <StudentTable data={this.state.loading ? [] : this.state.data.data[2]} columns={this.state.loading ? [] : this.state.data.columns[2]} title={'grade4'} /></td>
+    <td> <StudentTable data={this.state.loading ? [] : this.state.data.data[3]} columns={this.state.loading ? [] : this.state.data.columns[3]} title={'grade5'} /></td>
     </tr>
     </tbody>
     </table>

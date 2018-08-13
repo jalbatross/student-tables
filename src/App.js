@@ -19,7 +19,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    getUserBoardData(4).then(function (success) {
+    getUserBoardData(5).then(function (success) {
       this.setState({
         data: success,
         loading: false
@@ -37,7 +37,7 @@ class App extends React.Component {
       null,
       React.createElement(
         'table',
-        null,
+        { className: 'tables-container' },
         React.createElement(
           'tbody',
           null,
@@ -48,19 +48,25 @@ class App extends React.Component {
               'td',
               null,
               ' ',
-              React.createElement(StudentTable, { data: this.state.loading ? [] : this.state.data.data[0], columns: this.state.loading ? [] : this.state.data.columns[0], title: "hello" })
+              React.createElement(StudentTable, { data: this.state.loading ? [] : this.state.data.data[0], columns: this.state.loading ? [] : this.state.data.columns[0], title: 'grade2' })
             ),
             React.createElement(
               'td',
               null,
               ' ',
-              React.createElement(StudentTable, { data: this.state.loading ? [] : this.state.data.data[1], columns: this.state.loading ? [] : this.state.data.columns[1] })
+              React.createElement(StudentTable, { data: this.state.loading ? [] : this.state.data.data[1], columns: this.state.loading ? [] : this.state.data.columns[1], title: 'grade3' })
             ),
             React.createElement(
               'td',
               null,
               ' ',
-              React.createElement(StudentTable, { data: this.state.loading ? [] : this.state.data.data[2], columns: this.state.loading ? [] : this.state.data.columns[2] })
+              React.createElement(StudentTable, { data: this.state.loading ? [] : this.state.data.data[2], columns: this.state.loading ? [] : this.state.data.columns[2], title: 'grade4' })
+            ),
+            React.createElement(
+              'td',
+              null,
+              ' ',
+              React.createElement(StudentTable, { data: this.state.loading ? [] : this.state.data.data[3], columns: this.state.loading ? [] : this.state.data.columns[3], title: 'grade5' })
             )
           )
         )

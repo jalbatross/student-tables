@@ -29,7 +29,7 @@ class StudentTable extends React.Component {
         return(
             <div>
                 <span className="table-title ReactTable">{this.props.title}</span>
-                <ReactTable data={this.props.data} columns={ this.props.columns}/> 
+                <ReactTable data={this.props.data} defaultPageSize={50} columns={ this.props.columns} style={{height:'400px'}} showPagination={false} /> 
             </div>
         )
     }
