@@ -30,7 +30,3 @@ it('renders correct title', () => {
     expect(component.find('.table-title')).toHaveLength(1);
     expect(component.find('.table-title').text()).toBe('hello');
 });
-
-it('applies correct cell formatting', () => {
-  
-});

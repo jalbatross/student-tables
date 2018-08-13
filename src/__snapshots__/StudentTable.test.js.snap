@@ -9,7 +9,11 @@ exports[`renders correctly 1`] = `
   </span>
   <div
     className="ReactTable"
-    style={Object {}}
+    style={
+      Object {
+        "height": "400px",
+      }
+    }
   >
     <div
       className="rt-table"
@@ -238,118 +242,305 @@ exports[`renders correctly 1`] = `
             style={Object {}}
           />
         </div>
-      </div>
-    </div>
-    <div
-      className="pagination-bottom"
-    >
-      <div
-        className="-pagination"
-        style={undefined}
-      >
         <div
-          className="-previous"
+          className="rt-tr-group"
+          role="rowgroup"
         >
-          <button
-            className="-btn"
-            disabled={true}
-            onClick={[Function]}
-            type="button"
-          >
-            Previous
-          </button>
+          <div
+            className="rt-tr -padRow -odd"
+            role="row"
+            style={Object {}}
+          />
         </div>
         <div
-          className="-center"
+          className="rt-tr-group"
+          role="rowgroup"
         >
-          <span
-            className="-pageInfo"
-          >
-            Page
-             
-            <div
-              className="-pageJump"
-            >
-              <input
-                onBlur={[Function]}
-                onChange={[Function]}
-                onKeyPress={[Function]}
-                type="number"
-                value={1}
-              />
-            </div>
-             
-            of
-             
-            <span
-              className="-totalPages"
-            >
-              1
-            </span>
-          </span>
-          <span
-            className="select-wrap -pageSizeOptions"
-          >
-            <select
-              onChange={[Function]}
-              value={20}
-            >
-              <option
-                value={5}
-              >
-                5
-                 
-                rows
-              </option>
-              <option
-                value={10}
-              >
-                10
-                 
-                rows
-              </option>
-              <option
-                value={20}
-              >
-                20
-                 
-                rows
-              </option>
-              <option
-                value={25}
-              >
-                25
-                 
-                rows
-              </option>
-              <option
-                value={50}
-              >
-                50
-                 
-                rows
-              </option>
-              <option
-                value={100}
-              >
-                100
-                 
-                rows
-              </option>
-            </select>
-          </span>
+          <div
+            className="rt-tr -padRow -even"
+            role="row"
+            style={Object {}}
+          />
         </div>
         <div
-          className="-next"
+          className="rt-tr-group"
+          role="rowgroup"
         >
-          <button
-            className="-btn"
-            disabled={true}
-            onClick={[Function]}
-            type="button"
-          >
-            Next
-          </button>
+          <div
+            className="rt-tr -padRow -odd"
+            role="row"
+            style={Object {}}
+          />
+        </div>
+        <div
+          className="rt-tr-group"
+          role="rowgroup"
+        >
+          <div
+            className="rt-tr -padRow -even"
+            role="row"
+            style={Object {}}
+          />
+        </div>
+        <div
+          className="rt-tr-group"
+          role="rowgroup"
+        >
+          <div
+            className="rt-tr -padRow -odd"
+            role="row"
+            style={Object {}}
+          />
+        </div>
+        <div
+          className="rt-tr-group"
+          role="rowgroup"
+        >
+          <div
+            className="rt-tr -padRow -even"
+            role="row"
+            style={Object {}}
+          />
+        </div>
+        <div
+          className="rt-tr-group"
+          role="rowgroup"
+        >
+          <div
+            className="rt-tr -padRow -odd"
+            role="row"
+            style={Object {}}
+          />
+        </div>
+        <div
+          className="rt-tr-group"
+          role="rowgroup"
+        >
+          <div
+            className="rt-tr -padRow -even"
+            role="row"
+            style={Object {}}
+          />
+        </div>
+        <div
+          className="rt-tr-group"
+          role="rowgroup"
+        >
+          <div
+            className="rt-tr -padRow -odd"
+            role="row"
+            style={Object {}}
+          />
+        </div>
+        <div
+          className="rt-tr-group"
+          role="rowgroup"
+        >
+          <div
+            className="rt-tr -padRow -even"
+            role="row"
+            style={Object {}}
+          />
+        </div>
+        <div
+          className="rt-tr-group"
+          role="rowgroup"
+        >
+          <div
+            className="rt-tr -padRow -odd"
+            role="row"
+            style={Object {}}
+          />
+        </div>
+        <div
+          className="rt-tr-group"
+          role="rowgroup"
+        >
+          <div
+            className="rt-tr -padRow -even"
+            role="row"
+            style={Object {}}
+          />
+        </div>
+        <div
+          className="rt-tr-group"
+          role="rowgroup"
+        >
+          <div
+            className="rt-tr -padRow -odd"
+            role="row"
+            style={Object {}}
+          />
+        </div>
+        <div
+          className="rt-tr-group"
+          role="rowgroup"
+        >
+          <div
+            className="rt-tr -padRow -even"
+            role="row"
+            style={Object {}}
+          />
+        </div>
+        <div
+          className="rt-tr-group"
+          role="rowgroup"
+        >
+          <div
+            className="rt-tr -padRow -odd"
+            role="row"
+            style={Object {}}
+          />
+        </div>
+        <div
+          className="rt-tr-group"
+          role="rowgroup"
+        >
+          <div
+            className="rt-tr -padRow -even"
+            role="row"
+            style={Object {}}
+          />
+        </div>
+        <div
+          className="rt-tr-group"
+          role="rowgroup"
+        >
+          <div
+            className="rt-tr -padRow -odd"
+            role="row"
+            style={Object {}}
+          />
+        </div>
+        <div
+          className="rt-tr-group"
+          role="rowgroup"
+        >
+          <div
+            className="rt-tr -padRow -even"
+            role="row"
+            style={Object {}}
+          />
+        </div>
+        <div
+          className="rt-tr-group"
+          role="rowgroup"
+        >
+          <div
+            className="rt-tr -padRow -odd"
+            role="row"
+            style={Object {}}
+          />
+        </div>
+        <div
+          className="rt-tr-group"
+          role="rowgroup"
+        >
+          <div
+            className="rt-tr -padRow -even"
+            role="row"
+            style={Object {}}
+          />
+        </div>
+        <div
+          className="rt-tr-group"
+          role="rowgroup"
+        >
+          <div
+            className="rt-tr -padRow -odd"
+            role="row"
+            style={Object {}}
+          />
+        </div>
+        <div
+          className="rt-tr-group"
+          role="rowgroup"
+        >
+          <div
+            className="rt-tr -padRow -even"
+            role="row"
+            style={Object {}}
+          />
+        </div>
+        <div
+          className="rt-tr-group"
+          role="rowgroup"
+        >
+          <div
+            className="rt-tr -padRow -odd"
+            role="row"
+            style={Object {}}
+          />
+        </div>
+        <div
+          className="rt-tr-group"
+          role="rowgroup"
+        >
+          <div
+            className="rt-tr -padRow -even"
+            role="row"
+            style={Object {}}
+          />
+        </div>
+        <div
+          className="rt-tr-group"
+          role="rowgroup"
+        >
+          <div
+            className="rt-tr -padRow -odd"
+            role="row"
+            style={Object {}}
+          />
+        </div>
+        <div
+          className="rt-tr-group"
+          role="rowgroup"
+        >
+          <div
+            className="rt-tr -padRow -even"
+            role="row"
+            style={Object {}}
+          />
+        </div>
+        <div
+          className="rt-tr-group"
+          role="rowgroup"
+        >
+          <div
+            className="rt-tr -padRow -odd"
+            role="row"
+            style={Object {}}
+          />
+        </div>
+        <div
+          className="rt-tr-group"
+          role="rowgroup"
+        >
+          <div
+            className="rt-tr -padRow -even"
+            role="row"
+            style={Object {}}
+          />
+        </div>
+        <div
+          className="rt-tr-group"
+          role="rowgroup"
+        >
+          <div
+            className="rt-tr -padRow -odd"
+            role="row"
+            style={Object {}}
+          />
+        </div>
+        <div
+          className="rt-tr-group"
+          role="rowgroup"
+        >
+          <div
+            className="rt-tr -padRow -even"
+            role="row"
+            style={Object {}}
+          />
         </div>
       </div>
     </div>

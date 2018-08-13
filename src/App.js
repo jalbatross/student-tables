@@ -14,14 +14,19 @@ class App extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.state = {
       data: [],
+      titles: [],
       loading: true
     };
   }
 
   componentDidMount() {
+    //Get user board data from grade 2-> grade 5
     getUserBoardData(5).then(function (success) {
+      alert(success.length);
+      var titles = this.generateGradeTitles(success.data.length);
       this.setState({
         data: success,
+        titles: titles,
         loading: false
       });
     }.bind(this), function (fail) {
@@ -29,9 +34,68 @@ class App extends React.Component {
     });
   }
 
+  createGradeTables() {
+    var tables = [];
+    for (let i = 0; i < 4; i++) {
+      tables.push(React.createElement(
+        'td',
+        null,
+        React.createElement(StudentTable, {
+          data: this.state.loading ? [] : this.state.data.data[i],
+          columns: this.state.loading ? [] : this.state.data.columns[i],
+          title: this.state.loading ? [] : this.state.titles[i]
+        })
+      ));
+    }
+    return tables;
+  }
+
+  generateGradeTitles(numGrades) {
+    var titlesRet = [];
+    var gradeNum = 2;
+    var gradeTitle = "";
+    for (let i = 0; i < numGrades; i++) {
+      gradeNum = 2 + i; //Afficient Math starts at second grade
+
+      switch (gradeNum) {
+        case 2:
+          gradeTitle = "Second Graders";
+          break;
+        case 3:
+          gradeTitle = "Third Graders";
+          break;
+        case 4:
+          gradeTitle = "Fourth Graders";
+          break;
+        case 5:
+          gradeTitle = "Fifth Graders";
+          break;
+        case 6:
+          gradeTitle = "Sixth Graders";
+          break;
+        case 7:
+          gradeTitle = "Seventh Graders";
+          break;
+        case 8:
+          gradeTitle = "Eighth Graders";
+          break;
+        case 9:
+          gradeTitle = "Ninth Graders";
+          break;
+        case 10:
+          gradeTitle = "Tenth Graders";
+          break;
+      }
+
+      titlesRet.push(gradeTitle);
+    }
+    return titlesRet;
+  }
+
   handleChange(e) {}
 
   render() {
+    var tables = this.createGradeTables();
     return React.createElement(
       'div',
       null,
@@ -44,30 +108,7 @@ class App extends React.Component {
           React.createElement(
             'tr',
             null,
-            React.createElement(
-              'td',
-              null,
-              ' ',
-              React.createElement(StudentTable, { data: this.state.loading ? [] : this.state.data.data[0], columns: this.state.loading ? [] : this.state.data.columns[0], title: 'grade2' })
-            ),
-            React.createElement(
-              'td',
-              null,
-              ' ',
-              React.createElement(StudentTable, { data: this.state.loading ? [] : this.state.data.data[1], columns: this.state.loading ? [] : this.state.data.columns[1], title: 'grade3' })
-            ),
-            React.createElement(
-              'td',
-              null,
-              ' ',
-              React.createElement(StudentTable, { data: this.state.loading ? [] : this.state.data.data[2], columns: this.state.loading ? [] : this.state.data.columns[2], title: 'grade4' })
-            ),
-            React.createElement(
-              'td',
-              null,
-              ' ',
-              React.createElement(StudentTable, { data: this.state.loading ? [] : this.state.data.data[3], columns: this.state.loading ? [] : this.state.data.columns[3], title: 'grade5' })
-            )
+            tables
           )
         )
       )
